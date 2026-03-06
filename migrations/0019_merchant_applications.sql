@@ -1,0 +1,28 @@
+-- Merchant Applications table (gamified apply form)
+CREATE TABLE IF NOT EXISTS merchant_applications (
+  id TEXT PRIMARY KEY,
+  business_legal_name TEXT NOT NULL,
+  dba TEXT,
+  business_phone TEXT NOT NULL,
+  business_email TEXT NOT NULL,
+  address TEXT NOT NULL DEFAULT '',
+  city TEXT NOT NULL DEFAULT '',
+  state TEXT NOT NULL DEFAULT '',
+  zip TEXT NOT NULL DEFAULT '',
+  business_structure TEXT NOT NULL DEFAULT '',
+  business_start_date TEXT,
+  federal_tax_id TEXT,
+  owner_name TEXT NOT NULL,
+  owner_title TEXT,
+  ownership_percent TEXT,
+  owner_phone TEXT,
+  owner_email TEXT,
+  products_sold TEXT,
+  avg_monthly_volume TEXT,
+  avg_ticket TEXT,
+  percent_card_present TEXT,
+  signature_name TEXT NOT NULL,
+  agreed_to_terms INTEGER NOT NULL DEFAULT 0,
+  status TEXT NOT NULL DEFAULT 'pending',
+  created_at TEXT NOT NULL
+);

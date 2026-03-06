@@ -1,0 +1,25 @@
+# Tech Savvy Hawaii — Email Worker
+# Handles inbound email to contact@techsavvyhawaii.com
+# Classifies, logs to D1, auto-replies, and forwards
+
+name = "tight-fog-5031"
+main = "index.js"
+compatibility_date = "2024-12-01"
+account_id = "f21951bf022d439bbd297f510c086480"
+
+# ─── D1 Database (shared with main site) ──────────────────
+[[d1_databases]]
+binding = "DB"
+database_name = "savvy-admin"
+database_id = "1bbb0cdc-f9c3-4043-baad-48f9a7caa16e"
+
+# ─── Send Email Binding (for auto-replies) ────────────────
+# This lets the worker send emails FROM contact@techsavvyhawaii.com
+# Requires Email Routing enabled and a verified destination
+[[send_email]]
+name = "SEND_EMAIL"
+
+# ─── Secrets (set via wrangler secret put) ────────────────
+# cd worker/email-worker
+# wrangler secret put WORKER_KEY
+# (same key as your AI worker, used when calling /classify)

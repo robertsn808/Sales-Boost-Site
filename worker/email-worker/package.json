@@ -1,0 +1,17 @@
+{
+  "name": "techsavvy-email-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Email Worker for contact@techsavvyhawaii.com — classifies, logs, and forwards inbound email",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev --local"
+  },
+  "dependencies": {
+    "postal-mime": "^2.4.1"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

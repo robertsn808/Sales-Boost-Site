@@ -1,0 +1,48 @@
+# TechSavvy Hawaii - robots.txt
+# https://techsavvyhawaii.com
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://techsavvyhawaii.com/sitemap-index.xml
+Sitemap: https://techsavvyhawaii.com/sitemap-pages.xml
+Sitemap: https://techsavvyhawaii.com/sitemap-industries.xml
+Sitemap: https://techsavvyhawaii.com/sitemap-locations.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Google Image
+User-agent: Googlebot-Image
+Allow: /images/
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /

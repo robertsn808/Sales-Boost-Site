@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Statement Analysis — Tech Savvy Hawaii</title>
+<!--
+  ============================================================
+  TECH SAVVY HAWAII — Statement Analysis Email Template
+  ============================================================
+  
+  USAGE:
+  Replace all {{VARIABLE}} placeholders with data from
+  the /extract-statement endpoint response.
+  
+  VARIABLES:
+  {{BUSINESS_NAME}}         - Merchant's business name
+  {{OWNER_NAME}}            - Owner/contact first name
+  {{PROCESSOR_NAME}}        - Current processor
+  {{MONTHLY_VOLUME}}        - Total monthly volume
+  {{TOTAL_FEES}}            - Total monthly fees
+  {{EFFECTIVE_RATE}}        - Effective rate %
+  {{TRANSACTION_COUNT}}     - Number of transactions
+  {{AVERAGE_TICKET}}        - Average ticket size
+  {{INTERCHANGE_FEES}}      - Interchange fees
+  {{PROCESSOR_MARKUP}}      - Processor markup
+  {{MONTHLY_FEES}}          - Monthly fixed fees
+  {{PCI_FEE}}               - PCI compliance fee
+  {{PCI_NONCOMPLIANCE_FEE}} - PCI non-compliance fee
+  {{EQUIPMENT_FEE}}         - Equipment/terminal fee
+  {{BATCH_FEE}}             - Batch/settlement fee
+  {{PER_TRANSACTION_FEE}}   - Per-transaction fee
+  {{CHARGEBACK_FEE}}        - Chargeback fee
+  {{ETF}}                   - Early termination fee
+  {{PRICING_MODEL}}         - Pricing model type
+  {{JUNK_FEES_HTML}}        - Rendered junk fees rows
+  {{RED_FLAGS_HTML}}         - Rendered red flag items
+  {{RED_FLAG_COUNT}}        - Number of red flags
+  {{OVERALL_HEALTH}}        - good|fair|overpaying|critical
+  {{HEALTH_COLOR}}          - Hex color for health badge
+  {{HEALTH_LABEL}}          - Display label for health
+  {{MONTHLY_SAVINGS}}       - Potential monthly savings
+  {{ANNUAL_SAVINGS}}        - Potential annual savings
+  {{NOTES}}                 - AI summary notes
+  {{CURRENT_DATE}}          - Date of analysis
+  
+  HEALTH_COLOR MAP:
+  good     → #16a34a
+  fair     → #ca8a04
+  overpaying → #ea580c
+  critical → #dc2626
+  ============================================================
+-->
+</head>
+<body style="margin:0;padding:0;background-color:#f1f5f9;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;">
+
+<!-- Preheader (hidden preview text) -->
+<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">
+  Your free statement review is ready — we found {{RED_FLAG_COUNT}} red flag(s). Here's your full breakdown.
+</div>
+
+<!-- WRAPPER TABLE -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f1f5f9;">
+<tr><td align="center" style="padding:24px 16px;">
+
+<!-- MAIN CONTAINER -->
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+
+  <!-- ============ HEADER ============ -->
+  <tr>
+    <td style="background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);padding:36px 40px 32px;text-align:center;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="text-align:center;">
+            <div style="font-size:28px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;line-height:1.2;">
+              TECH SAVVY HAWAII
+            </div>
+            <div style="font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:2px;margin-top:4px;">
+              Smart Solutions for Local Business
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ HEALTH BADGE + INTRO ============ -->
+  <tr>
+    <td style="padding:32px 40px 0;">
+      <p style="margin:0 0 16px;font-size:16px;color:#334155;line-height:1.5;">
+        Hi {{OWNER_NAME}},
+      </p>
+      <p style="margin:0 0 24px;font-size:16px;color:#334155;line-height:1.5;">
+        Thanks for trusting us with your statement review. We've analyzed your <strong>{{PROCESSOR_NAME}}</strong> statement for <strong>{{BUSINESS_NAME}}</strong> and here's what we found:
+      </p>
+
+      <!-- Health Badge -->
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="background-color:{{HEALTH_COLOR}};border-radius:10px;padding:20px 24px;text-align:center;">
+            <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.85);margin-bottom:4px;">
+              Overall Statement Health
+            </div>
+            <div style="font-size:28px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">
+              {{HEALTH_LABEL}}
+            </div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.9);margin-top:6px;">
+              {{RED_FLAG_COUNT}} red flag(s) detected
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ SNAPSHOT METRICS ============ -->
+  <tr>
+    <td style="padding:28px 40px 0;">
+      <div style="font-size:18px;font-weight:700;color:#0f172a;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e2e8f0;">
+        📊 Your Numbers at a Glance
+      </div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <!-- Monthly Volume -->
+          <td width="33%" style="padding:8px 4px;text-align:center;vertical-align:top;">
+            <div style="background:#f8fafc;border-radius:8px;padding:16px 8px;">
+              <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;margin-bottom:4px;">Volume</div>
+              <div style="font-size:22px;font-weight:800;color:#0f172a;">${{MONTHLY_VOLUME}}</div>
+              <div style="font-size:11px;color:#94a3b8;">per month</div>
+            </div>
+          </td>
+          <!-- Total Fees -->
+          <td width="33%" style="padding:8px 4px;text-align:center;vertical-align:top;">
+            <div style="background:#f8fafc;border-radius:8px;padding:16px 8px;">
+              <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;margin-bottom:4px;">Total Fees</div>
+              <div style="font-size:22px;font-weight:800;color:#dc2626;">${{TOTAL_FEES}}</div>
+              <div style="font-size:11px;color:#94a3b8;">per month</div>
+            </div>
+          </td>
+          <!-- Effective Rate -->
+          <td width="33%" style="padding:8px 4px;text-align:center;vertical-align:top;">
+            <div style="background:#f8fafc;border-radius:8px;padding:16px 8px;">
+              <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;margin-bottom:4px;">Eff. Rate</div>
+              <div style="font-size:22px;font-weight:800;color:{{HEALTH_COLOR}};">{{EFFECTIVE_RATE}}%</div>
+              <div style="font-size:11px;color:#94a3b8;">of volume</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <!-- Transactions -->
+          <td width="33%" style="padding:8px 4px;text-align:center;vertical-align:top;">
+            <div style="background:#f8fafc;border-radius:8px;padding:16px 8px;">
+              <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;margin-bottom:4px;">Transactions</div>
+              <div style="font-size:22px;font-weight:800;color:#0f172a;">{{TRANSACTION_COUNT}}</div>
+              <div style="font-size:11px;color:#94a3b8;">per month</div>
+            </div>
+          </td>
+          <!-- Average Ticket -->
+          <td width="33%" style="padding:8px 4px;text-align:center;vertical-align:top;">
+            <div style="background:#f8fafc;border-radius:8px;padding:16px 8px;">
+              <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;margin-bottom:4px;">Avg Ticket</div>
+              <div style="font-size:22px;font-weight:800;color:#0f172a;">${{AVERAGE_TICKET}}</div>
+              <div style="font-size:11px;color:#94a3b8;">per sale</div>
+            </div>
+          </td>
+          <!-- Pricing Model -->
+          <td width="33%" style="padding:8px 4px;text-align:center;vertical-align:top;">
+            <div style="background:#f8fafc;border-radius:8px;padding:16px 8px;">
+              <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;margin-bottom:4px;">Pricing</div>
+              <div style="font-size:16px;font-weight:800;color:#0f172a;">{{PRICING_MODEL}}</div>
+              <div style="font-size:11px;color:#94a3b8;">model</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ TOP 10 FEE BREAKDOWN ============ -->
+  <tr>
+    <td style="padding:28px 40px 0;">
+      <div style="font-size:18px;font-weight:700;color:#0f172a;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e2e8f0;">
+        🔍 Top 10 Fee Breakdown
+      </div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size:14px;">
+        <!-- Table Header -->
+        <tr>
+          <td style="padding:10px 12px;font-weight:700;color:#64748b;font-size:11px;text-transform:uppercase;letter-spacing:1px;border-bottom:2px solid #e2e8f0;">#</td>
+          <td style="padding:10px 12px;font-weight:700;color:#64748b;font-size:11px;text-transform:uppercase;letter-spacing:1px;border-bottom:2px solid #e2e8f0;">Fee Type</td>
+          <td style="padding:10px 12px;font-weight:700;color:#64748b;font-size:11px;text-transform:uppercase;letter-spacing:1px;border-bottom:2px solid #e2e8f0;text-align:right;">Your Amount</td>
+          <td style="padding:10px 12px;font-weight:700;color:#64748b;font-size:11px;text-transform:uppercase;letter-spacing:1px;border-bottom:2px solid #e2e8f0;text-align:right;">Normal Range</td>
+        </tr>
+        <!-- 1. Effective Rate -->
+        <tr>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">1</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;">Effective Rate</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:700;">{{EFFECTIVE_RATE}}%</td>
+          <td style="padding:10px 12px;color:#94a3b8;border-bottom:1px solid #f1f5f9;text-align:right;">2.0–3.0%</td>
+        </tr>
+        <!-- 2. Monthly Fees -->
+        <tr style="background-color:#f8fafc;">
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">2</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;">Monthly / Annual Fees</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:700;">${{MONTHLY_FEES}}/mo</td>
+          <td style="padding:10px 12px;color:#94a3b8;border-bottom:1px solid #f1f5f9;text-align:right;">$10–$25/mo</td>
+        </tr>
+        <!-- 3. PCI Fee -->
+        <tr>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">3</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;">PCI Compliance Fee</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:700;">${{PCI_FEE}}/mo</td>
+          <td style="padding:10px 12px;color:#94a3b8;border-bottom:1px solid #f1f5f9;text-align:right;">$7–$12/mo</td>
+        </tr>
+        <!-- 3b. PCI Non-Compliance (only shown if > 0) -->
+        <!--{{PCI_NONCOMPLIANCE_ROW_START}}-->
+        <tr style="background-color:#fef2f2;">
+          <td style="padding:10px 12px;color:#dc2626;border-bottom:1px solid #f1f5f9;font-weight:600;">⚠</td>
+          <td style="padding:10px 12px;color:#dc2626;border-bottom:1px solid #f1f5f9;font-weight:600;">PCI Non-Compliance Fee</td>
+          <td style="padding:10px 12px;color:#dc2626;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:700;">${{PCI_NONCOMPLIANCE_FEE}}/mo</td>
+          <td style="padding:10px 12px;color:#dc2626;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:600;">$0 (fix now!)</td>
+        </tr>
+        <!--{{PCI_NONCOMPLIANCE_ROW_END}}-->
+        <!-- 4. Equipment Fee -->
+        <tr style="background-color:#f8fafc;">
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">4</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;">Equipment / Terminal</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:700;">${{EQUIPMENT_FEE}}/mo</td>
+          <td style="padding:10px 12px;color:#94a3b8;border-bottom:1px solid #f1f5f9;text-align:right;">$0–$30/mo</td>
+        </tr>
+        <!-- 5. Interchange -->
+        <tr>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">5</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;">Interchange Fees</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:700;">${{INTERCHANGE_FEES}}</td>
+          <td style="padding:10px 12px;color:#94a3b8;border-bottom:1px solid #f1f5f9;text-align:right;">Varies</td>
+        </tr>
+        <!-- 6. Batch Fee -->
+        <tr style="background-color:#f8fafc;">
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">6</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;">Batch / Settlement Fee</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:700;">${{BATCH_FEE}}</td>
+          <td style="padding:10px 12px;color:#94a3b8;border-bottom:1px solid #f1f5f9;text-align:right;">$0.10–$0.30</td>
+        </tr>
+        <!-- 7. Per-Transaction Fee -->
+        <tr>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">7</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;">Transaction Fee</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:700;">${{PER_TRANSACTION_FEE}}</td>
+          <td style="padding:10px 12px;color:#94a3b8;border-bottom:1px solid #f1f5f9;text-align:right;">$0.05–$0.15</td>
+        </tr>
+        <!-- 8. Chargeback Fee -->
+        <tr style="background-color:#f8fafc;">
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">8</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;">Chargeback Fee</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:700;">${{CHARGEBACK_FEE}}</td>
+          <td style="padding:10px 12px;color:#94a3b8;border-bottom:1px solid #f1f5f9;text-align:right;">$15–$25</td>
+        </tr>
+        <!-- 9. ETF -->
+        <tr>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">9</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;">Early Termination Fee</td>
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:700;">${{ETF}}</td>
+          <td style="padding:10px 12px;color:#94a3b8;border-bottom:1px solid #f1f5f9;text-align:right;">$0–$500</td>
+        </tr>
+        <!-- 10. Junk Fees -->
+        <tr style="background-color:#f8fafc;">
+          <td style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">10</td>
+          <td colspan="3" style="padding:10px 12px;color:#0f172a;border-bottom:1px solid #f1f5f9;font-weight:600;">Junk / Suspicious Fees</td>
+        </tr>
+        {{JUNK_FEES_HTML}}
+        <!--
+          JUNK_FEES_HTML: Render one row per junk fee, or a single "None found ✓" row.
+          
+          If junkFees.length === 0:
+          <tr><td></td><td colspan="2" style="padding:8px 12px;color:#16a34a;font-style:italic;">None found ✓</td><td></td></tr>
+          
+          For each junk fee:
+          <tr>
+            <td></td>
+            <td style="padding:6px 12px 6px 24px;color:#ea580c;">↳ {{FEE_NAME}}</td>
+            <td style="padding:6px 12px;text-align:right;color:#ea580c;font-weight:600;">${{FEE_AMOUNT}}</td>
+            <td></td>
+          </tr>
+        -->
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ RED FLAGS ============ -->
+  <tr>
+    <td style="padding:28px 40px 0;">
+      <div style="font-size:18px;font-weight:700;color:#0f172a;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e2e8f0;">
+        🚩 Red Flags Found ({{RED_FLAG_COUNT}})
+      </div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        {{RED_FLAGS_HTML}}
+        <!--
+          RED_FLAGS_HTML: Render one row per red flag.
+          
+          If redFlags.length === 0:
+          <tr>
+            <td style="padding:12px 16px;background:#f0fdf4;border-radius:8px;color:#16a34a;font-size:14px;">
+              ✅ No red flags — your statement looks clean!
+            </td>
+          </tr>
+          
+          For each red flag:
+          <tr>
+            <td style="padding:8px 0;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="28" style="vertical-align:top;padding-top:2px;color:#dc2626;font-size:16px;">⚠️</td>
+                  <td style="padding:0 0 0 4px;color:#451a03;font-size:14px;line-height:1.5;">
+                    {{FLAG_TEXT}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        -->
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ AI NOTES ============ -->
+  <tr>
+    <td style="padding:28px 40px 0;">
+      <div style="background:#f0f9ff;border-left:4px solid #0284c7;border-radius:0 8px 8px 0;padding:16px 20px;">
+        <div style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#0284c7;font-weight:700;margin-bottom:6px;">Analyst Notes</div>
+        <div style="font-size:14px;color:#0c4a6e;line-height:1.6;">{{NOTES}}</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ============ SAVINGS CTA ============ -->
+  <tr>
+    <td style="padding:28px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="background:linear-gradient(135deg,#065f46 0%,#059669 100%);border-radius:12px;padding:28px 32px;text-align:center;">
+            <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.8);margin-bottom:8px;">
+              Your Estimated Savings with Tech Savvy Hawaii
+            </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td width="50%" style="text-align:center;padding:8px;">
+                  <div style="font-size:36px;font-weight:800;color:#ffffff;">${{MONTHLY_SAVINGS}}</div>
+                  <div style="font-size:12px;color:rgba(255,255,255,0.75);margin-top:2px;">per month</div>
+                </td>
+                <td width="50%" style="text-align:center;padding:8px;">
+                  <div style="font-size:36px;font-weight:800;color:#ffffff;">${{ANNUAL_SAVINGS}}</div>
+                  <div style="font-size:12px;color:rgba(255,255,255,0.75);margin-top:2px;">per year</div>
+                </td>
+              </tr>
+            </table>
+            <div style="margin-top:4px;font-size:11px;color:rgba(255,255,255,0.6);">
+              Based on switching to our zero-fee cash discount program
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ CTA BUTTONS ============ -->
+  <tr>
+    <td style="padding:28px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="text-align:center;">
+            <p style="margin:0 0 20px;font-size:16px;color:#334155;line-height:1.5;">
+              Want to see exactly how much you'd save? Let's talk — no obligation, no pressure.
+            </p>
+            <!--[if mso]>
+            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="tel:8087675460" style="height:52px;v-text-anchor:middle;width:280px;" arcsize="12%" stroke="f" fillcolor="#0f172a">
+              <w:anchorlock/>
+              <center style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:bold;">Call (808) 767-5460</center>
+            </v:roundrect>
+            <![endif]-->
+            <!--[if !mso]><!-->
+            <a href="tel:8087675460" style="display:inline-block;background-color:#0f172a;color:#ffffff;font-size:16px;font-weight:700;text-decoration:none;padding:14px 40px;border-radius:8px;letter-spacing:0.3px;">
+              📞&nbsp;&nbsp;Call (808) 767-5460
+            </a>
+            <!--<![endif]-->
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align:center;padding-top:12px;">
+            <a href="mailto:contact@techsavvyhawaii.com?subject=Statement%20Review%20Follow-up%20-%20{{BUSINESS_NAME}}" style="display:inline-block;background-color:#ffffff;color:#0f172a;font-size:14px;font-weight:600;text-decoration:none;padding:12px 32px;border-radius:8px;border:2px solid #cbd5e1;">
+              ✉️&nbsp;&nbsp;Email Us Instead
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ FOOTER ============ -->
+  <tr>
+    <td style="padding:32px 40px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="border-top:1px solid #e2e8f0;padding-top:24px;text-align:center;">
+            <div style="font-size:14px;font-weight:700;color:#0f172a;">Tech Savvy Hawaii</div>
+            <div style="font-size:12px;color:#94a3b8;margin-top:4px;">
+              <a href="https://techsavvyhawaii.com" style="color:#94a3b8;text-decoration:none;">techsavvyhawaii.com</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+              <a href="mailto:contact@techsavvyhawaii.com" style="color:#94a3b8;text-decoration:none;">contact@techsavvyhawaii.com</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+              <a href="tel:8087675460" style="color:#94a3b8;text-decoration:none;">(808) 767-5460</a>
+            </div>
+            <div style="font-size:11px;color:#cbd5e1;margin-top:12px;line-height:1.5;">
+              This analysis was generated on {{CURRENT_DATE}} using AI-assisted statement parsing.<br>
+              Estimates are based on typical savings and may vary. No cost. No obligation.<br>
+              © 2025 Tech Savvy Hawaii. All rights reserved.
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</table>
+<!-- /MAIN CONTAINER -->
+
+</td></tr>
+</table>
+<!-- /WRAPPER -->
+
+</body>
+</html>
