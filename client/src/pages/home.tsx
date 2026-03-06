@@ -776,9 +776,9 @@ function LocalTrustBadges() {
 
 export default function Home() {
   useSEO({
-    title: "Stop Paying 3-4% of Every Sale | TechSavvy Hawai'i — Zero-Fee Payment Processing",
-    description: "Hawai'i businesses save $6,000–$36,000/year by eliminating credit card processing fees. Free equipment, no contracts, local support. Calculate your savings now.",
-    keywords: "zero fee payment processing Hawaii, eliminate credit card fees Honolulu, cash discount program Hawaii, merchant services Oahu, no contract payment processor, TechSavvy Hawaii, free POS terminal",
+    title: "Zero-Fee Credit Card Processing Hawaii | Stop Paying 3-4% | TechSavvy Hawai'i",
+    description: "Eliminate credit card processing fees for your Hawai'i business with our cash discount program. Save $6,000–$36,000/year on card processing. Free POS terminal, no contracts, local support. Payment processing & merchant services for all Hawaiian Islands.",
+    keywords: "credit card processing Hawaii, payment processing Hawaii, card processing Hawaii, credit card fees Hawaii, zero fee credit card processing, cash discount program Hawaii, eliminate credit card fees Honolulu, merchant services Oahu, payment processor Hawaii, credit card machine Hawaii, POS terminal Hawaii, no contract card processing, free credit card terminal Hawaii, accept credit cards Hawaii, best payment processor Hawaii, cheapest credit card processing Hawaii, small business credit card processing Hawaii, TechSavvy Hawaii",
     canonical: "https://techsavvyhawaii.com/",
     ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
   });

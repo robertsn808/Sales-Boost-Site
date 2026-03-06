@@ -877,11 +877,19 @@ function ContactSection() {
 
 export default function ContactPage() {
   useSEO({
-    title: "Contact TechSavvy Hawaii | Free Quote & Website Mockup",
-    description: "Contact TechSavvy Hawaii for a free savings analysis on your payment processing. Zero-fee terminals, Cash Back, and high-risk accounts. Serving all Hawaiian Islands.",
-    keywords: "contact TechSavvy Hawaii, free payment processing quote, merchant services Hawaii, Honolulu payment processor, Cash Back Hawaii",
+    title: "Contact TechSavvy Hawaii | Free Credit Card Processing Quote",
+    description: "Contact TechSavvy Hawaii for a free savings analysis on your credit card processing fees. Zero-fee card processing, cash discount program, free POS terminal. Serving Honolulu, Maui, Big Island, Kaua'i.",
+    keywords: "contact TechSavvy Hawaii, credit card processing quote Hawaii, free payment processing consultation, merchant services Hawaii contact, card processing Honolulu, payment processor Hawaii phone number, credit card fees analysis Hawaii",
     canonical: "https://techsavvyhawaii.com/contact",
     ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact TechSavvy Hawaii — Credit Card Processing & Payment Processing",
+      "url": "https://techsavvyhawaii.com/contact",
+      "description": "Get a free credit card processing savings analysis. Zero-fee payment processing for Hawaii businesses.",
+      "mainEntity": { "@id": "https://techsavvyhawaii.com/#localbusiness" },
+    },
   });
 
   return (

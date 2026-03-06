@@ -13,9 +13,9 @@ import { useSEO } from "@/hooks/useSEO";
 
 export default function PricingPage() {
   useSEO({
-    title: "Try Free | Zero-Fee Payment Processing | TechSavvy Hawaii",
+    title: "Credit Card Processing Pricing | Zero Fees | TechSavvy Hawaii",
     description: "TechSavvy Hawaii: $0 processing fees, $0 monthly fees, no contracts. Free equipment for qualifying businesses. Cash discount program saves Hawaii businesses $6,000–$36,000/year.",
-    keywords: "zero fee payment processing pricing Hawaii, cash discount program cost, free POS terminal Hawaii, no contract merchant services, TechSavvy Hawaii pricing",
+    keywords: "credit card processing pricing Hawaii, payment processing cost, cash discount program pricing, zero fee card processing cost, free POS terminal Hawaii, no contract credit card processing, merchant services pricing Hawaii, card processing rates Hawaii",
     canonical: "https://techsavvyhawaii.com/pricing",
     ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
     jsonLd: {

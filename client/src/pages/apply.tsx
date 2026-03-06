@@ -165,11 +165,19 @@ function MilestoneMessage({ step }: { step: number }) {
 
 export default function ApplyPage() {
   useSEO({
-    title: "Apply Now | TechSavvy Hawaii — Zero-Fee Payment Processing",
-    description:
-      "Apply for zero-fee payment processing in under 3 minutes. No paperwork, no fax machines.",
+    title: "Apply for Zero-Fee Credit Card Processing | TechSavvy Hawaii",
+    description: "Apply for zero-fee credit card processing in under 3 minutes. Cash discount program eliminates payment processing fees. Free POS terminal, no contracts. Hawaii businesses save $6,000–$36,000/year.",
+    keywords: "apply credit card processing Hawaii, zero fee payment processing application, cash discount program signup, merchant services application Hawaii, card processing Hawaii apply, free POS terminal application",
     canonical: "https://techsavvyhawaii.com/apply",
     ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Apply for Zero-Fee Credit Card Processing — TechSavvy Hawaii",
+      "url": "https://techsavvyhawaii.com/apply",
+      "description": "Apply for zero-fee credit card processing and payment processing in Hawaii. Cash discount program, free terminal, no contracts.",
+      "isPartOf": { "@id": "https://techsavvyhawaii.com/#website" },
+    },
   });
 
   const [step, setStep] = useState(0);

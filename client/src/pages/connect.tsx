@@ -518,9 +518,9 @@ function ScheduleCallSection() {
 
 export default function ConnectPage() {
   useSEO({
-    title: "Connect With TechSavvy Hawaii | AI Chat, Schedule Call, Get Started",
-    description: "Connect with TechSavvy Hawaii's AI assistant, schedule a call, or start your free consultation. Zero-fee payment processing and Cash Back solutions for Hawaiian businesses.",
-    keywords: "connect TechSavvy Hawaii, AI chat business Hawaii, schedule consultation Honolulu, payment processing demo, AI assistant merchant services",
+    title: "Connect With TechSavvy Hawaii | Credit Card Processing Consultation",
+    description: "Schedule a call or chat with TechSavvy Hawaii about zero-fee credit card processing. Learn how our cash discount program eliminates payment processing fees for your business.",
+    keywords: "connect TechSavvy Hawaii, credit card processing consultation, payment processing demo Hawaii, schedule call card processing, merchant services consultation Honolulu",
     canonical: "https://techsavvyhawaii.com/connect",
     ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
   });

@@ -72,12 +72,21 @@ const SEVERITY_ICON: Record<string, React.ReactNode> = {
 
 export default function StatementReviewPage() {
   useSEO({
-    title: "Free AI Statement Review | TechSavvy Hawaii",
-    description:
-      "Upload your merchant statement and our AI instantly identifies hidden fees, inflated rates, and overcharges. Get a free savings report in minutes.",
-    keywords:
-      "merchant statement review, hidden fees, credit card processing, payment processing analysis, free statement audit",
+    title: "Free Credit Card Processing Statement Review | Find Hidden Fees | TechSavvy Hawaii",
+    description: "Upload your credit card processing statement and our AI instantly identifies hidden fees, inflated rates, and overcharges. See how much you're losing on payment processing fees. Free savings report.",
+    keywords: "credit card processing statement review, merchant statement analysis Hawaii, hidden credit card fees, payment processing overcharges, credit card fee audit free, processing rate comparison, statement review Hawaii",
+    canonical: "https://techsavvyhawaii.com/statement-review",
     ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Credit Card Processing Statement Analyzer",
+      "url": "https://techsavvyhawaii.com/statement-review",
+      "description": "AI-powered analysis of your credit card processing statement. Identifies hidden fees, inflated rates, and overcharges. Free savings report for Hawaii businesses.",
+      "applicationCategory": "FinanceApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "provider": { "@id": "https://techsavvyhawaii.com/#organization" },
+    },
   });
 
   const { toast } = useToast();
