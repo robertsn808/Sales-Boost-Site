@@ -64,7 +64,7 @@ function HeroSection() {
             </motion.h1>
 
             <motion.p className="text-base sm:text-lg text-muted-foreground mb-4 max-w-2xl mx-auto leading-relaxed" variants={fadeUp}>
-              TechSavvy Hawai'i helps local businesses keep 100% of their revenue with zero-fee payment processing.
+              TechSavvy Hawai'i helps local businesses keep 100% of their revenue with a compliant cash discount program — not surcharging.
             </motion.p>
 
             {/* Supporting bullets */}
@@ -296,7 +296,7 @@ function WhySection() {
               <span className="text-primary">TechSavvy Hawai'i</span>
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-5">
-              Local Hawai'i businesses are losing thousands every year simply for accepting payments. We built TechSavvy Hawai'i to change that.
+              Local Hawai'i businesses are losing thousands every year simply for accepting payments. We built TechSavvy Hawai'i to change that — with a fully compliant cash discount program that eliminates processing fees entirely.
             </p>
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
               We're not a mainland company with a 1-800 number. We're local. When you call, a real person from Hawai'i picks up. When you need help, someone comes to your business — not an email bot.
@@ -351,13 +351,13 @@ function HowItWorks() {
     {
       num: "2",
       title: "Customers pay normally",
-      desc: "Customers can still use all cards — Visa, Mastercard, Amex, Apple Pay. The small surcharge is automatically handled and fully disclosed.",
+      desc: "Customers can still use all cards — Visa, Mastercard, Amex, Apple Pay. Your posted prices reflect a cash discount, and card users simply pay the standard listed price.",
       icon: Users,
     },
     {
       num: "3",
       title: "Processing costs disappear",
-      desc: "You keep 100% of every sale. No processing fees, no monthly fees, no hidden charges. Funds deposited next business day.",
+      desc: "With our cash discount program, you keep 100% of every sale. No processing fees, no monthly fees, no hidden charges. Funds deposited next business day.",
       icon: DollarSign,
     },
   ];
@@ -645,13 +645,15 @@ function TestimonialSection() {
 function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
   const faqs = [
-    { q: "Is this actually legal?", a: "Yes — 100% legal in Hawai'i and all 50 states. Visa, Mastercard, and the FTC all allow cash discount programs when properly disclosed. We handle all the compliance and signage for you." },
-    { q: "Do customers pay extra?", a: "Customers see a small surcharge for card payments, similar to what gas stations have done for years. Cash customers get the listed price. Most customers don't bat an eye — it's become standard." },
-    { q: "Can I keep my current POS?", a: "In many cases, yes. We work with most major POS systems. If an upgrade is needed, we provide free equipment for qualifying businesses." },
-    { q: "How fast is the setup?", a: "Most businesses are up and running in 3–7 days. Our local Hawai'i team handles everything — terminal, programming, signage, and staff training." },
-    { q: "What equipment is needed?", a: "We provide a free terminal for businesses processing $5K+ per month. It accepts all cards, tap-to-pay, Apple Pay, Google Pay — everything your customers use." },
-    { q: "What if I don't like it?", a: "No contract. No cancellation fee. If it's not working for you, you can leave anytime with zero penalty. We keep businesses by saving them money, not by trapping them." },
-    { q: "How much will I actually save?", a: "That depends on your volume, but most Hawai'i businesses save $500–$3,000+ per month. Use our calculator above or get a free statement analysis — no commitment required." },
+    { q: "What is a cash discount program?", a: "A cash discount program lets you offer a discount to customers who pay with cash, while customers who pay by card pay the standard listed price. Unlike surcharging, which adds a fee on top, cash discounting sets your posted price as the card price and rewards cash payers with a lower price. It's the same model gas stations have used for years — and it's fully legal in all 50 states." },
+    { q: "Is cash discounting legal?", a: "Yes — 100% legal in Hawai'i and all 50 states. Cash discount programs are explicitly permitted by Visa, Mastercard, and the FTC. They are not surcharges. We handle all the compliance, signage, and receipt formatting so you stay compliant from day one." },
+    { q: "How is this different from surcharging?", a: "Surcharging adds a fee on top of the listed price for card users — and it's restricted or banned in some states. Cash discounting is different: your posted price is the standard price, and cash customers receive a discount. It's simpler, legal everywhere, and customers respond to it more positively because they see a discount rather than a penalty." },
+    { q: "Will my customers complain?", a: "The vast majority don't. With cash discounting, customers see 'cash discount applied' on their receipt when paying cash — it feels like a reward, not a penalty. Card-paying customers simply pay the listed price they already expected. Most businesses report zero pushback after the first week." },
+    { q: "Can I keep my current POS?", a: "In many cases, yes. Our cash discount program works with most major POS systems. If an upgrade is needed, we provide free equipment for qualifying businesses — pre-configured for compliant cash discount processing." },
+    { q: "How fast is the setup?", a: "Most businesses are up and running in 3–7 days. Our local Hawai'i team handles everything — terminal programming for cash discount, compliant signage, receipt configuration, and staff training." },
+    { q: "What equipment is needed?", a: "We provide a free terminal for businesses processing $5K+ per month. It's pre-programmed for cash discount compliance and accepts all cards, tap-to-pay, Apple Pay, Google Pay — everything your customers use." },
+    { q: "What if I don't like it?", a: "No contract. No cancellation fee. If cash discounting isn't working for your business, you can leave anytime with zero penalty. We keep businesses by saving them money, not by trapping them." },
+    { q: "How much will I actually save?", a: "That depends on your volume, but most Hawai'i businesses save $500–$3,000+ per month with our cash discount program. Use our calculator above or get a free statement analysis — no commitment required." },
   ];
 
   return (
