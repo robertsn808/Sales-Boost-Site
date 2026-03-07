@@ -6,7 +6,7 @@ import {
   Check, ArrowRight, ChevronDown, DollarSign, TrendingUp, Star,
   Phone, MapPin, Sparkles, Calculator, ShieldCheck,
   AlertTriangle, Users, Building2, Utensils, Car, Scissors, Heart,
-  Zap, Clock, X,
+  Zap, Clock, X, Gift,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
@@ -53,8 +53,8 @@ function HeroSection() {
           <motion.div variants={staggerContainer} initial="hidden" animate="visible">
             <motion.div variants={fadeUp}>
               <Badge variant="outline" className="text-primary border-primary/30 bg-primary/5 mb-4">
-                <MapPin className="w-3 h-3 mr-1" />
-                Helping Hawai'i businesses keep their money in Hawai'i
+                <Gift className="w-3 h-3 mr-1" />
+                Our gift to Hawai'i businesses: zero processing fees + free equipment
               </Badge>
             </motion.div>
 
@@ -64,15 +64,15 @@ function HeroSection() {
             </motion.h1>
 
             <motion.p className="text-base sm:text-lg text-muted-foreground mb-4 max-w-2xl mx-auto leading-relaxed" variants={fadeUp}>
-              TechSavvy Hawai'i helps local businesses keep 100% of their revenue with a compliant cash discount program — not surcharging.
+              We want to give your business the gift of keeping 100% of every sale — with a compliant cash discount program, free equipment, and zero fees. Not surcharging. Just savings.
             </motion.p>
 
             {/* Supporting bullets */}
             <motion.div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mb-8" variants={fadeUp}>
               {[
-                "No processing fees",
-                "No monthly fees",
-                "Free website for merchants",
+                "Free POS terminal",
+                "Zero processing fees",
+                "Free merchant website",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-1.5">
                   <Check className="w-4 h-4 text-primary flex-shrink-0" />
@@ -270,9 +270,15 @@ function ProblemSection() {
             <p className="text-lg sm:text-xl font-semibold text-foreground mb-2">
               That's money you earned — going straight to the credit card companies.
             </p>
-            <p className="text-muted-foreground">
-              What if you could keep all of it?
+            <p className="text-muted-foreground mb-4">
+              What if someone handed you a way to keep all of it?
             </p>
+            <Button variant="outline" size="sm" asChild>
+              <a href="/equipment">
+                <Gift className="w-3.5 h-3.5" />
+                See what we're giving you — free
+              </a>
+            </Button>
           </motion.div>
         </motion.div>
       </div>
@@ -344,9 +350,9 @@ function HowItWorks() {
   const steps = [
     {
       num: "1",
-      title: "We set up your payment system",
-      desc: "Quick application, fast approval. Our local team installs your new terminal, sets up signage, and trains your staff. You don't touch a thing.",
-      icon: Building2,
+      title: "We gift you a free terminal",
+      desc: "Quick application, fast approval. We give you a free POS terminal or card reader — our gift to your business. Our local team handles installation, signage, and training.",
+      icon: Gift,
     },
     {
       num: "2",
@@ -356,7 +362,7 @@ function HowItWorks() {
     },
     {
       num: "3",
-      title: "Processing costs disappear",
+      title: "You keep every dollar you earn",
       desc: "With our cash discount program, you keep 100% of every sale. No processing fees, no monthly fees, no hidden charges. Funds deposited next business day.",
       icon: DollarSign,
     },
@@ -395,8 +401,8 @@ function HowItWorks() {
           <motion.div className="text-center" variants={fadeUp}>
             <Button size="lg" asChild>
               <a href="/apply">
-                Apply Now — Takes 3 Minutes
-                <ArrowRight className="w-4 h-4" />
+                <Gift className="w-4 h-4" />
+                Claim Your Free Equipment
               </a>
             </Button>
           </motion.div>
@@ -417,7 +423,7 @@ function ComparisonSection() {
     { feature: "Website Included", traditional: "No", techsavvy: "Yes — Free", highlight: false },
     { feature: "Local Support", traditional: "Rare / Call Center", techsavvy: "Yes — Hawai'i Team", highlight: true },
     { feature: "Contract Lock-in", traditional: "Often 3+ years", techsavvy: "Never", highlight: false },
-    { feature: "Equipment Cost", traditional: "$300–$800+", techsavvy: "Free*", highlight: false },
+    { feature: "Equipment Cost", traditional: "$300–$800+", techsavvy: "Free — Our Gift", highlight: true },
     { feature: "Next-Day Funding", traditional: "Sometimes", techsavvy: "Yes", highlight: false },
   ];
 
@@ -704,25 +710,26 @@ function FinalCTA() {
           viewport={{ once: true }}
           className="text-center"
         >
+          <Gift className="w-12 h-12 text-primary mx-auto mb-4" />
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-5">
-            Stop Losing Money on{" "}
-            <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Every Transaction</span>
+            We Want to{" "}
+            <span className="bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">Give You This</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg mb-8 max-w-xl mx-auto">
-            Join hundreds of Hawai'i businesses that already switched to zero-fee processing. Setup takes minutes, savings last forever.
+            Free equipment. Zero processing fees. No contracts. Our gift to your business — because Hawai'i businesses deserve to keep every dollar they earn.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <Button size="lg" className="text-base px-8 py-6 w-full sm:w-auto" asChild>
-              <a href="/statement-review">
-                Get Your Free Savings Report
-                <ArrowRight className="w-4 h-4" />
+              <a href="/apply">
+                <Gift className="w-4 h-4" />
+                Claim Your Free Setup
               </a>
             </Button>
             <Button variant="outline" size="lg" className="text-base px-8 py-6 w-full sm:w-auto" asChild>
-              <a href="/contact">
-                Schedule a 10-Minute Setup Call
-                <Phone className="w-4 h-4" />
+              <a href="/equipment">
+                Browse Free Equipment
+                <ArrowRight className="w-4 h-4" />
               </a>
             </Button>
           </div>

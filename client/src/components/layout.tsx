@@ -9,6 +9,7 @@ import {
   Phone,
   Mail,
   Clock,
+  Gift,
 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
@@ -27,6 +28,7 @@ function Navbar() {
 
   const links = [
     { label: "How It Works", href: "/how-it-works" },
+    { label: "Equipment", href: "/equipment" },
     { label: "Try Free", href: "/pricing" },
     { label: "High-Risk", href: "/high-risk" },
     { label: "FAQ", href: "/faq" },
@@ -151,7 +153,7 @@ function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10">
           <div className="col-span-2 md:col-span-1">
             <p className="text-xs sm:text-sm text-white/70 leading-relaxed max-w-sm mb-3">
-              Hawai'i's trusted payment processing company. Zero fees, no contracts, local support. Cash Back solutions for every business.
+              Hawai'i's trusted payment processing company. Our gift to local businesses: zero fees, free equipment, no contracts, and local support.
             </p>
             <div className="space-y-2.5 text-sm text-white/60">
               <a href="tel:+18087675460" className="flex items-center gap-2 transition-colors hover:text-white">
@@ -179,6 +181,11 @@ function Footer() {
               <li>
                 <Link href="/pricing" className="transition-colors hover:text-white" data-testid="link-footer-pricing">
                   Payment Processing
+                </Link>
+              </li>
+              <li>
+                <Link href="/equipment" className="transition-colors hover:text-white" data-testid="link-footer-equipment">
+                  Free Equipment
                 </Link>
               </li>
               <li>
