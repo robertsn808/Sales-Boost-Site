@@ -17,9 +17,9 @@ const stepKeepProfits = "/images/step-keep-revenue.png";
 
 export default function HowItWorksPage() {
   useSEO({
-    title: "How It Works | Eliminate Credit Card Fees in 3 Steps | TechSavvy Hawaii",
+    title: "How Zero-Fee Credit Card Processing Works | Cash Discount Program | TechSavvy Hawaii",
     description: "Apply in 3 minutes, get approved in 24 hours, start saving immediately. TechSavvy handles setup, training, and signage. Zero-fee payment processing for Hawaii businesses.",
-    keywords: "how cash discount program works, eliminate credit card fees steps, payment processing setup Hawaii, TechSavvy how it works",
+    keywords: "how credit card processing works Hawaii, cash discount program setup, eliminate credit card fees steps, payment processing setup Hawaii, how to stop paying credit card fees, card processing setup Hawaii",
     canonical: "https://techsavvyhawaii.com/how-it-works",
     ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
     jsonLd: {

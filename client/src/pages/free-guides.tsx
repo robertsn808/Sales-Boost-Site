@@ -91,8 +91,11 @@ export default function FreeGuidesPage() {
   const [selectedGuides, setSelectedGuides] = useState<string[]>([]);
 
   useSEO({
-    title: "Free Merchant Processing Guides | TechSavvy Hawaii",
-    description: "Download free guides to review your merchant statement, compare rates, secure your payments, and eliminate processing fees.",
+    title: "Free Credit Card Processing Guides | Reduce Payment Fees | TechSavvy Hawaii",
+    description: "Free guides on credit card processing fees, merchant statement review, rate comparison, and cash discount programs. Learn how to eliminate payment processing fees for your Hawaii business.",
+    keywords: "credit card processing guide, payment processing fees guide, merchant statement checklist, rate comparison guide, cash discount guide Hawaii, how to reduce credit card fees",
+    canonical: "https://techsavvyhawaii.com/free-guides",
+    ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
   });
 
   const toggleGuide = (slug: string) => {

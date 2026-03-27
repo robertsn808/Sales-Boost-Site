@@ -42,9 +42,9 @@ const industries: Record<string, {
       { q: "What about online orders and delivery?", a: "We support online payment gateways, virtual terminals, and integration with ordering platforms. The cash discount model works for in-person transactions." },
     ],
     seo: {
-      title: "Restaurant Payment Processing Hawaii | Zero Fees | TechSavvy",
+      title: "Restaurant Credit Card Processing Hawaii | Zero Fees | TechSavvy",
       description: "Hawaii restaurants save $14,400/year by eliminating credit card processing fees. Free POS terminal, no contracts, local support. Cash discount program for restaurants, bars, and food service.",
-      keywords: "restaurant payment processing Hawaii, zero fee restaurant POS, restaurant credit card fees Honolulu, food service merchant services Hawaii",
+      keywords: "restaurant credit card processing Hawaii, restaurant payment processing, zero fee restaurant POS, restaurant credit card fees Honolulu, food service card processing Hawaii, eliminate restaurant processing fees",
     },
   },
   "auto-shops": {
@@ -74,9 +74,9 @@ const industries: Record<string, {
       { q: "What if I have multiple bays or locations?", a: "We can set up multiple terminals. Each one connects to the same merchant account with unified reporting." },
     ],
     seo: {
-      title: "Auto Shop Payment Processing Hawaii | Zero Fees | TechSavvy",
+      title: "Auto Shop Credit Card Processing Hawaii | Zero Fees | TechSavvy",
       description: "Hawaii auto repair shops save $18,000/year by eliminating credit card processing fees. Free terminal, no contracts. Built for high-ticket automotive businesses.",
-      keywords: "auto repair payment processing Hawaii, mechanic credit card fees, auto shop POS system Honolulu, automotive merchant services Hawaii",
+      keywords: "auto repair credit card processing Hawaii, auto shop payment processing, mechanic credit card fees Hawaii, automotive card processing Honolulu, auto shop POS system Hawaii",
     },
   },
   salons: {
@@ -106,9 +106,9 @@ const industries: Record<string, {
       { q: "What about retail product sales?", a: "Same system — whether it's a haircut or a bottle of shampoo, the cash discount applies to all card transactions." },
     ],
     seo: {
-      title: "Salon Payment Processing Hawaii | Zero Fees | TechSavvy",
+      title: "Salon Credit Card Processing Hawaii | Zero Fees | TechSavvy",
       description: "Hawaii salons and spas save $7,200/year by eliminating credit card processing fees. Free terminal, no contracts, tips protected. Built for beauty and wellness businesses.",
-      keywords: "salon payment processing Hawaii, spa credit card fees, beauty shop POS Honolulu, salon merchant services Hawaii",
+      keywords: "salon credit card processing Hawaii, spa payment processing, beauty shop credit card fees, salon card processing Honolulu, salon POS system Hawaii, nail salon payment processing",
     },
   },
 };

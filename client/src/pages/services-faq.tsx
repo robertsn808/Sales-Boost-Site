@@ -34,11 +34,19 @@ function FAQAccordion({ items }: { items: { q: string; a: string }[] }) {
 
 export default function FaqPage() {
   useSEO({
-    title: "FAQ | Zero-Fee Payment Processing Questions | TechSavvy Hawaii",
-    description: "Get answers about zero-fee payment processing, Cash Back, surcharging, high-risk merchants, and more. Everything you need to know about TechSavvy Hawaii.",
-    keywords: "payment processing FAQ, zero fee processing questions, how does Cash Back work, is surcharging legal Hawaii, merchant services FAQ, TechSavvy Hawaii questions",
+    title: "Credit Card Processing FAQ | Payment Processing Questions | TechSavvy Hawaii",
+    description: "Get answers about credit card processing, cash discount programs, payment processing fees, and merchant services in Hawaii. Learn how to eliminate card processing fees for your business.",
+    keywords: "credit card processing FAQ Hawaii, payment processing questions, cash discount program FAQ, how to eliminate credit card fees, card processing questions Hawaii, merchant services FAQ, credit card fees explained, payment processor FAQ Hawaii",
     canonical: "https://techsavvyhawaii.com/faq",
     ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "Credit Card Processing & Payment Processing FAQ — TechSavvy Hawaii",
+      "url": "https://techsavvyhawaii.com/faq",
+      "description": "Frequently asked questions about credit card processing fees, cash discount programs, and payment processing for Hawaii businesses.",
+      "isPartOf": { "@id": "https://techsavvyhawaii.com/#website" },
+    },
   });
 
   const generalFAQs = [

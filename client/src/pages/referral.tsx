@@ -411,9 +411,9 @@ function ApplyForm() {
 
 export default function ReferralPage() {
   useSEO({
-    title: "Refer a Business & Earn Residual Income | TechSavvy Hawaii",
+    title: "Refer Businesses for Credit Card Processing | Earn Residual Income | TechSavvy Hawaii",
     description: "Earn residual monthly income by referring businesses to TechSavvy Hawaii. No selling, no experience needed. Just make introductions and get paid every month for as long as they process.",
-    keywords: "referral partner program Hawaii, earn residual income, payment processing referrals, side income Hawaii, refer businesses, TechSavvy partner program",
+    keywords: "referral partner program Hawaii, credit card processing referral, payment processing referrals, earn residual income card processing, refer businesses Hawaii, TechSavvy partner program",
     canonical: "https://techsavvyhawaii.com/refer",
     ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
   });

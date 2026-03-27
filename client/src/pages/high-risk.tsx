@@ -190,9 +190,9 @@ export default function HighRiskPage() {
   }), []);
 
   useSEO({
-    title: "High-Risk Merchant Account & Payment Processing | Zero Fees — TechSavvy Hawaii",
+    title: "High-Risk Credit Card Processing | Zero Fees | TechSavvy Hawaii",
     description: "High-risk merchant accounts with zero-fee payment processing. CBD, vape, firearms, nutraceuticals, supplements, travel, online gaming, adult entertainment & more. Fast approvals, no excessive reserves, no hidden fees, no contracts. Accept all major credit & debit cards.",
-    keywords: "high risk merchant account, high risk payment processing, high risk payment processor, high risk merchant services, CBD payment processing, CBD merchant account, vape merchant account, vape payment processing, firearms payment processing, firearms merchant account, nutraceuticals merchant account, adult merchant account, online gaming payment processing, travel merchant account, supplement merchant account, e-cigarette merchant account, high risk credit card processing, cannabis payment processing, Delta-8 merchant account, subscription box payment processing",
+    keywords: "high risk credit card processing Hawaii, high risk payment processing Hawaii, high risk merchant account, high risk payment processor, high risk merchant services, CBD payment processing, CBD merchant account, vape merchant account, vape payment processing, firearms payment processing, firearms merchant account, nutraceuticals merchant account, adult merchant account, online gaming payment processing, travel merchant account, supplement merchant account, e-cigarette merchant account, high risk credit card processing, cannabis payment processing, Delta-8 merchant account, subscription box payment processing",
     canonical: "https://techsavvyhawaii.com/high-risk",
     ogImage: "https://techsavvyhawaii.com/images/hero-hawaii-sunset.jpg",
     ogTitle: "High-Risk Merchant Accounts — Zero-Fee Processing | TechSavvy Hawaii",

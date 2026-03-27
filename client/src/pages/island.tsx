@@ -19,9 +19,9 @@ const islands: Record<string, {
     description: "O'ahu is home to over 30,000 small businesses — from Waikiki tourist spots to local Kailua shops. Most are paying 2-4% on every card transaction without realizing how much it adds up. TechSavvy is headquartered right here in Honolulu at 1917 S King St. We're your neighbors, and we're saving O'ahu businesses thousands every year.",
     testimonial: { quote: "We were losing over $1,200/month and had no idea. TechSavvy showed us the numbers and had us set up in less than a week.", name: "Restaurant Owner", biz: "Waikiki" },
     seo: {
-      title: "Payment Processing O'ahu & Honolulu | Zero Fees | TechSavvy Hawaii",
+      title: "Credit Card Processing O'ahu & Honolulu | Zero Fees | TechSavvy Hawaii",
       description: "O'ahu businesses save $500-$3,000+/month with TechSavvy's zero-fee payment processing. Local Honolulu company, free equipment, no contracts. Serving Waikiki, Kailua, Pearl City & all of O'ahu.",
-      keywords: "payment processing Oahu, merchant services Honolulu, zero fee credit card Waikiki, POS terminal Kailua, business payment processing Pearl City",
+      keywords: "credit card processing Oahu, payment processing Honolulu, card processing Waikiki, merchant services Oahu, credit card fees Honolulu, POS terminal Kailua, credit card machine Pearl City, payment processor Kapolei",
     },
   },
   maui: {
@@ -30,9 +30,9 @@ const islands: Record<string, {
     description: "Maui's small businesses are the backbone of the island — from Lahaina's Front Street to Kihei's beach shops. Tourist-heavy businesses process a massive volume of card transactions, and every swipe costs you 2-4%. TechSavvy serves Maui businesses with the same local support and zero-fee processing we bring to O'ahu.",
     testimonial: { quote: "Switching was the easiest business decision we made. No more monthly fees bleeding us dry during slow season.", name: "Retail Shop Owner", biz: "Kihei" },
     seo: {
-      title: "Payment Processing Maui | Zero Fees | TechSavvy Hawaii",
+      title: "Credit Card Processing Maui | Zero Fees | TechSavvy Hawaii",
       description: "Maui businesses save $500-$3,000+/month with TechSavvy's zero-fee payment processing. Free equipment, no contracts. Serving Lahaina, Kihei, Kahului, Wailuku & all of Maui.",
-      keywords: "payment processing Maui, merchant services Lahaina, zero fee credit card Kihei, POS terminal Kahului, Maui business payment processing",
+      keywords: "credit card processing Maui, payment processing Lahaina, card processing Kihei, merchant services Maui, credit card fees Kahului, POS terminal Maui, credit card machine Wailuku, payment processor Maui",
     },
   },
   "big-island": {
@@ -41,9 +41,9 @@ const islands: Record<string, {
     description: "From Kona's coffee country to Hilo's historic downtown, Big Island businesses process thousands in card transactions every month. The fees add up fast — especially for tourism-dependent businesses in Kona. TechSavvy brings zero-fee processing to the Big Island with the same local support and free equipment.",
     testimonial: { quote: "TechSavvy saved us over $900/month. That's real money for a small Kona coffee shop.", name: "Coffee Shop Owner", biz: "Kailua-Kona" },
     seo: {
-      title: "Payment Processing Big Island | Kona & Hilo | Zero Fees | TechSavvy",
+      title: "Credit Card Processing Big Island | Kona & Hilo | Zero Fees | TechSavvy",
       description: "Big Island businesses save $500-$3,000+/month with TechSavvy's zero-fee payment processing. Free equipment, no contracts. Serving Kona, Hilo, Waimea & all of Hawai'i Island.",
-      keywords: "payment processing Big Island Hawaii, merchant services Kona, zero fee credit card Hilo, POS terminal Kailua-Kona, Big Island business payments",
+      keywords: "credit card processing Big Island Hawaii, payment processing Kona, card processing Hilo, merchant services Big Island, credit card fees Kailua-Kona, POS terminal Hilo, credit card machine Waimea",
     },
   },
   kauai: {
@@ -52,9 +52,9 @@ const islands: Record<string, {
     description: "Kaua'i's Garden Isle charm extends to its tight-knit business community. Whether you're running a Poipu restaurant or a Kapaa surf shop, processing fees take a real bite out of your revenue. TechSavvy brings zero-fee processing to Kaua'i so you keep every dollar you earn from locals and visitors alike.",
     testimonial: { quote: "Best part is no contracts. We tried it, loved it, and we've been saving ever since.", name: "Cafe Owner", biz: "Kapaa" },
     seo: {
-      title: "Payment Processing Kaua'i | Zero Fees | TechSavvy Hawaii",
+      title: "Credit Card Processing Kaua'i | Zero Fees | TechSavvy Hawaii",
       description: "Kaua'i businesses save $500-$3,000+/month with TechSavvy's zero-fee payment processing. Free equipment, no contracts. Serving Lihue, Poipu, Kapaa, Princeville & all of Kaua'i.",
-      keywords: "payment processing Kauai, merchant services Lihue, zero fee credit card Poipu, POS terminal Kapaa, Kauai business payment processing",
+      keywords: "credit card processing Kauai, payment processing Lihue, card processing Poipu, merchant services Kauai, credit card fees Kapaa, POS terminal Kauai, credit card machine Princeville",
     },
   },
 };

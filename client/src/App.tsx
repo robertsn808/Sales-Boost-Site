@@ -23,6 +23,7 @@ const StatementReviewPage = lazy(() => import("@/pages/statement-review"));
 const PartnerAgreementPage = lazy(() => import("@/pages/partner-agreement"));
 const ReferralPage = lazy(() => import("@/pages/referral"));
 const ApplyPage = lazy(() => import("@/pages/apply"));
+const EquipmentPage = lazy(() => import("@/pages/equipment"));
 const PartnerProgramPage = lazy(() => import("@/pages/partner-program"));
 const IndustryPage = lazy(() => import("@/pages/industry"));
 const IslandPage = lazy(() => import("@/pages/island"));
@@ -59,6 +60,7 @@ function MainRouter() {
           <Route path="/partner-agreement" component={PartnerAgreementPage} />
           <Route path="/refer" component={ReferralPage} />
           <Route path="/apply" component={ApplyPage} />
+          <Route path="/equipment" component={EquipmentPage} />
           <Route path="/industries/:industry" component={IndustryPage} />
           <Route path="/locations/:island" component={IslandPage} />
           <Route component={NotFound} />
